@@ -3,9 +3,12 @@ package ie.atu.week2.project;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Value;
 
 @Data
 @AllArgsConstructor
+
+@Value
 
 public class User
 {
