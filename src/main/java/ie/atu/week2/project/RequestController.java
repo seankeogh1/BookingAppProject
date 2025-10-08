@@ -38,8 +38,10 @@ public class RequestController {
         return "Deleted by Firstname";
     }
 
-
-
-
-
+      // Be inplemeted when we add id to the User class to track how many there are
+   /* @PutMapping("/User")
+    public boolean updateUser(@PathVariable id, @RequestBody User user) {
+        User currentUser = userRepo.findOne(id);
+   }
+    */
 }
