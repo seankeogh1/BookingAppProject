@@ -9,12 +9,17 @@ import lombok.Data;
 
 public class User
 {
-    @NotBlank
+
+    @NotBlank(message = "Can not be left blank")
     private String Firstname;
-    @NotBlank
+    @NotBlank(message = "Can not be left blank")
     private String Lastname;
+    @NotBlank
     private String Email;
+    @NotBlank
     private String Password;
+    @NotBlank
     private String Country;
+
 
 }

@@ -21,7 +21,7 @@ public class RequestController {
 
     @GetMapping("/User Info")
     public User getUser() {
-        User myUser = new User("subhan","john","adamok@gamil.com","trex","america");
+        User myUser = new User("joey","john","adamok@gamil.com","trex","america");
         return myUser;
     }
 
@@ -30,6 +30,15 @@ public class RequestController {
         myUsers.add(myUser);
         return myUser;
     }
+
+    @DeleteMapping("/delete")
+    public String deleteByName(@RequestParam(value = "Firstname") String Firstname){
+        // Add a logic to delete by Firstname
+
+        return "Deleted by Firstname";
+    }
+
+
 
 
 
