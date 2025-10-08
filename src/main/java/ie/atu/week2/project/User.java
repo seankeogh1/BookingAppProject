@@ -7,7 +7,6 @@ import lombok.Value;
 
 @Data
 @AllArgsConstructor
-
 @Value
 
 public class User
