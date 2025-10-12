@@ -21,7 +21,7 @@ public class RequestController {
 
     @GetMapping("/User Info")
     public User getUser() {
-        User myUser = new User("joey","john","adamok@gamil.com","trex","america");
+        User myUser = new User("joey","john","adamok@gamil.com","trex","america",5675);
         return myUser;
     }
 
@@ -37,6 +37,9 @@ public class RequestController {
 
         return "Deleted by Firstname";
     }
+
+
+
 
       // Be inplemeted when we add id to the User class to track how many there are
    /* @PutMapping("/User")
