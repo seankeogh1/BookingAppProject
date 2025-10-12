@@ -22,6 +22,8 @@ public class User
     private String Password;
     @NotBlank
     private String Country;
+    @NotBlank(message = "Can not be left blank")
+    private double Id;
 
 
 }
