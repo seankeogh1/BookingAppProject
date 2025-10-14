@@ -1,29 +1,31 @@
 package ie.atu.week2.project;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Value;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
-@Value
+@NoArgsConstructor
+public class User {
 
-public class User
-{
+    @NotBlank(message = "First name cannot be left blank")
+    private String firstname;
 
-    @NotBlank(message = "Can not be left blank")
-    private String Firstname;
-    @NotBlank(message = "Can not be left blank")
-    private String Lastname;
-    @NotBlank
-    private String Email;
-    @NotBlank
-    private String Password;
-    @NotBlank
-    private String Country;
-    @NotBlank(message = "Can not be left blank")
-    private double Id;
+    @NotBlank(message = "Last name cannot be left blank")
+    private String lastname;
 
+    @NotBlank(message = "Email cannot be left blank")
+    private String email;
 
+    @NotBlank(message = "Password cannot be left blank")
+    private String password;
+
+    @NotBlank(message = "Country cannot be left blank")
+    private String country;
+
+    @NotNull(message = "ID cannot be null")
+    private Long id;
 }
