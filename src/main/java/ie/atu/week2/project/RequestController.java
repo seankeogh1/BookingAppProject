@@ -6,23 +6,20 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@RequestMapping("/UserApp")
 @RestController
-
+@RequestMapping("/UserApp")
 public class RequestController {
 
-    List<User> myUsers = new ArrayList<User>();
-
+    private final List<User> myUsers = new ArrayList<>();
 
     @GetMapping
     public String welcome() {
         return "Welcome to UserApp!";
     }
 
-    @GetMapping("/User Info")
+    @GetMapping("/UserInfo")
     public User getUser() {
-        User myUser = new User("joey","john","adamok@gamil.com","trex","america",5675);
-        return myUser;
+        return new User("joey", "john", "adamok@gamil.com", "trex", "america", 5675L);
     }
 
     @PostMapping("/addUser")
@@ -34,8 +31,9 @@ public class RequestController {
     @DeleteMapping("/delete")
     public String deleteByName(@RequestParam(value = "Firstname") String Firstname){
         // Add a logic to delete by Firstname
-
-        return "Deleted by Firstname";
+         boolean removed = myUsers.remove(Firstname);
+         return "Deleted user with first name: " + Firstname;
+    }
     }
 
 
@@ -47,4 +45,5 @@ public class RequestController {
         User currentUser = userRepo.findOne(id);
    }
     */
-}
+    
+
