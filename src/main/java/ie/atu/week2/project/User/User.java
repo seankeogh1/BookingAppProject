@@ -1,4 +1,4 @@
-package ie.atu.week2.project;
+package ie.atu.week2.project.User;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

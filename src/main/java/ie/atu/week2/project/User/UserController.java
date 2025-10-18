@@ -1,4 +1,4 @@
-package ie.atu.week2.project;
+package ie.atu.week2.project.User;
 
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/UserApp")
-public class RequestController {
+public class UserController {
 
     private final List<User> myUsers = new ArrayList<>();
 
