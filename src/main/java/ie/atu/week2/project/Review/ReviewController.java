@@ -25,6 +25,7 @@ public class ReviewController {
 
     }
 
+    @DeleteMapping
     public String deleteByName(@RequestParam(value = "Firstname") String Firstname) {
         boolean removed = reviews.remove(Firstname);
         return "Deleted review with first name: " + Firstname;
