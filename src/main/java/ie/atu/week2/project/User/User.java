@@ -28,4 +28,6 @@ public class User {
 
     @NotNull(message = "ID cannot be null")
     private Long id;
+
+   // Generate Constructurs and Getter and Setters.
 }
