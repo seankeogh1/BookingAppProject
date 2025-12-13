@@ -1,5 +1,6 @@
 package ie.atu.week2.project.Review;
 
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -25,6 +26,10 @@ public class Review {
 
     @NotBlank(message = "Comment cannot be left blank")
     private String comment;
+
+    @Id
+    @NotBlank(message = "Enter unique Id")
+    private String ReviewId;
 
     private String date = LocalDate.now().toString();
 
